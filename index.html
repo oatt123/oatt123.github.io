@@ -41,15 +41,21 @@ Object类型的属性和方法：</p>
 <li>toString()<br>
 </li>
 <li>valueOf()
-2、js中的引用类型有：Object类型，Array类型，Date类型，RegExp类型，Function类型，基本包装类型（Boolean，Number，String），内置对象（Global，Math类型）
-Object对象的使用</li>
+2、js中的引用类型有：Object类型，Array类型，Date类型，RegExp类型，Function类型，基本包装类型（Boolean，Number，String），内置对象（Global，Math类型）</li>
 </ul>
 
-<p>对象字面量表示法``</p>
-
-<p><code>var person = new Object();
+<p>Object对象的创建
+<code>var person = new Object();
 person.name = "Nick";
 person.age  = 29;</code></p>
+
+<p>对象字面量表示法：简化了对象创建的代码
+<code>var p = { name : "Nick" , age :19 }</code>
+<code>var p = { "name" : "Nick" , "age" :19 }</code>
+以上两端代码是等价的</p>
+
+<p>Object对象的访问：使用 “.” 和“[propertyName]”表示法访问对象的属性。
+<code>p.name</code><code>p["name"]</code>,使用“[]”的好处是可以使用变量。通常，除非使用变量访问属性，否则建议使用"."</p>
       </section>
     </div>
 
