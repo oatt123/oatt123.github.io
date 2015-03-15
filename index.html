@@ -56,6 +56,32 @@ person.age  = 29;</code></p>
 
 <p>Object对象的访问：使用 “.” 和“[propertyName]”表示法访问对象的属性。
 <code>p.name</code><code>p["name"]</code>,使用“[]”的好处是可以使用变量。通常，除非使用变量访问属性，否则建议使用"."</p>
+
+<p>3、Array类型
+js中的数组和其他语言中的数组有着很大的区别，js中的数组可以保存任何类型的数据，如<code>new Array{"abc","20"}</code>
+创建数组
+<code>var color = new Array(20)</code> 创建一个20项的数组。
+<code>var colors = new Array("red","blue","green")</code>也可以这样，js的语法是非常灵活的。
+利用数组字面量创建
+<code>var col = []</code>//创建一个空数组
+<code>var d=["red","color","green"]</code>//</p>
+
+<p>获取数组的长度：<code>var len = d.length</code></p>
+
+<p>数组最多可以包含4,294,967,295个项，多了，会报异常。</p>
+
+<p>toLocaleString()方法和toString()方法的不同。</p>
+
+<p>join()方法：<code>d.join(",")</code>// 返回 red，color，green
+数组的栈方法和队列方法
+push()方法将元素插入到数组末尾，pop()方法获取数组末尾的值
+shift()，获取数组的第一项</p>
+
+<p>重排方法：reverse()和sort方法
+reverse会反转数组[1,2,3,4,5]——&gt;[5,4,3,2,1]
+sort()方法会调用每一项的toString()方法后升序排列数组，如[1,2,5,10]的结果是[1,10,2,5]
+slice()方法
+concat()方法</p>
       </section>
     </div>
 
