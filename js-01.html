@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="魔乐塔的个人主页 : 人类是文明的缔造者，但当它存在以后，就不属于人类了。若是上帝造了人，那么人也不是属于上帝的，人属于人类自己。我们已看不到上帝，终有一天，继承这文明的，也将看不到我们。">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>魔乐塔的个人主页</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/oatt123">View on GitHub</a>
+
+          <h1 id="project_title">魔乐塔的个人主页</h1>
+          <h2 id="project_tagline">人类是文明的缔造者，但当它存在以后，就不属于人类了。若是上帝造了人，那么人也不是属于上帝的，人属于人类自己。我们已看不到上帝，终有一天，继承这文明的，也将看不到我们。</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="js中的一些细节" class="anchor" href="#js%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>js中的一些细节</h1>
+
+<h2>
+<a id="1级" class="anchor" href="#1%E7%BA%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>1级</h2>
+
+<p>1、XHTML:HTML遵循xml的规则。XHTML中“&lt;” ，“&gt;”需要使用html实体(&lt;&amp;lt;)替代，当然，这样会导致代码不容易理解，可以使用CDATA区域来解决（CDATA区域的语法规则：&lt;![CDATA[ ... ... ]]&gt;）</p>
+
+<p>2、使用引入的方式而不是直接将代码写在html中的有点有3个：1、便于维护，2、可缓存，3、避免xhtml以及其他xml技术的不兼容。</p>
+
+<p>3、文档模式（&lt;!DOCTYPE HTML PUBLIC "" ""&gt;）的概念：混杂模式，标准模式，会影响css的呈现和js的执行。</p>
+
+<p>4、noscript标签：标签中的内容，会在js功能缺失的情况下执行</p>
+
+<h2>
+<a id="2级" class="anchor" href="#2%E7%BA%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>2级</h2>
+
+<p>1、为初始化的变量初值是undefined</p>
+
+<p>2、可以在修改变量值的同时，修改变量的类型
+<code>var message = "hello";</code>
+<code>message = 100;</code></p>
+
+<p>3、var关键字控制的局部变量和全局变量
+<code>function add(){</code>
+<code>var a ="a-test";</code>
+<code>alert(a);</code>
+<code>}</code>
+以上的代码，因为使用了var来声明a，所以，a是局部变量，当方法返回后，a便会被销毁</p>
+
+<p>4、typeof是操作符而非函数，我们会看到 <code>typeof (95)</code>这样的用法，其中"95"两边的括号可以不要，两种语法都可以正常使用。
+typeof的返回值是字符串，有6个。
+<code>"undefined"——&gt;如果测试值未定义</code>
+<code>"boolean"</code>
+<code>"string"</code>
+<code>"number"</code>
+<code>"object"——&gt;测试值是对象或null，也就是说 typeof null 返回的是字符串"object"</code>
+<code>"function"——&gt;测试值是函数</code></p>
+
+<p>5、数值类型的值可以是 十，八，十六进制值，</p>
+
+<p>6、NaN:NaN（Not a Number）,是一个特殊的数值，非数值。当一个本来要返回数值的操作，未返回数值的时候，会返回此值，这样避免了抛出错误。
+如666/0，会返回NaN,而不是抛出错误，不会影响其他代码的执行。
+NaN两个不同寻常的特点：1、任何设计NaN的操作都会返回NaN,当然这是游客嫩导致问题的。2、NaN与任何值都不想等，包括NaN本身。NaN == NaN返回的是false。
+isNaN(Param)方法：返回的是true和false，当传入的Param可以转换成数值的时候，返回true，否则返回false。
+isNaN方法也使用与对象。</p>
+
+<p>7、isFinite(Param):当Param的返回在Number.MAX_VALUE和Number.MIN_VALULE之间时返回true，否则返回false。</p>
+
+<p>8、e在数值中的使用</p>
+
+<p>9、Number.NEGATIVE_INFINITY,Number.POSITIVE_INFINITY</p>
+
+<h2>
+<a id="3级" class="anchor" href="#3%E7%BA%A7" aria-hidden="true"><span class="octicon octicon-link"></span></a>3级</h2>
+
+<p>1、字符字面量指的是转义序列</p>
+
+<p>2、String()函数
+在不知道要转换的值是不是null或undefined的情况下，可以使用转型函数String()，转型函数String的特点是，如果值有toString()方法，调用toString()方法，如果值是null，返回字符串"null"，如果值是undefined，返回字符串"undefined"
+3、</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
