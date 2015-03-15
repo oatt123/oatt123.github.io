@@ -28,60 +28,22 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="js-中的引用类型" class="anchor" href="#js-%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>js 中的引用类型</h1>
+<a id="js面向对象的程序设计" class="anchor" href="#js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" aria-hidden="true"><span class="octicon octicon-link"></span></a>js面向对象的程序设计</h1>
 
-<p>1、js中的数据类型：Undefined，Null，Boolean，Number，String，Object
-Object类型的属性和方法：</p>
+<h2>
+<a id="创建对象" class="anchor" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1" aria-hidden="true"><span class="octicon octicon-link"></span></a>创建对象</h2>
 
-<ul>
-<li>constructor：保存用于创建当前对象的函数，</li>
-<li>hasOwnProperty(propertyName)：用于检查给定的属性在当前对象实例（而不是在实例的原型）中是否存在，参数必须以字符串形式指定</li>
-<li>isPrototypeOf(object)用于检查传入的对象是否是另一个对象的原型，</li>
-<li>propertyIsEnumerable(propertyName)：用于检查传入的对象是否能使用for in语句来每局。</li>
-<li>toString()<br>
-</li>
-<li>valueOf()
-2、js中的引用类型有：Object类型，Array类型，Date类型，RegExp类型，Function类型，基本包装类型（Boolean，Number，String），内置对象（Global，Math类型）</li>
-</ul>
+<p>1、工厂模式：解决了创建多个相似对象的问题，如写一个创建Person对象的方法，如果需要Person对象，那么就创建调用这个方法，但是这种方式无法知道对象的类型
+2、构造函数模式：构造函数和其他函数唯一的区别就是调用它们的方式不同，下面是一个使用构造函数的例子
+<code>function( name, age , job ){
+   this.name = name;
+   this.age = age;
+   this.sayName = function(){
+      alert(this.name);
+   }
+}</code></p>
 
-<p>Object对象的创建
-<code>var person = new Object();
-person.name = "Nick";
-person.age  = 29;</code></p>
-
-<p>对象字面量表示法：简化了对象创建的代码
-<code>var p = { name : "Nick" , age :19 }</code>
-<code>var p = { "name" : "Nick" , "age" :19 }</code>
-以上两端代码是等价的</p>
-
-<p>Object对象的访问：使用 “.” 和“[propertyName]”表示法访问对象的属性。
-<code>p.name</code><code>p["name"]</code>,使用“[]”的好处是可以使用变量。通常，除非使用变量访问属性，否则建议使用"."</p>
-
-<p>3、Array类型
-js中的数组和其他语言中的数组有着很大的区别，js中的数组可以保存任何类型的数据，如<code>new Array{"abc","20"}</code>
-创建数组
-<code>var color = new Array(20)</code> 创建一个20项的数组。
-<code>var colors = new Array("red","blue","green")</code>也可以这样，js的语法是非常灵活的。
-利用数组字面量创建
-<code>var col = []</code>//创建一个空数组
-<code>var d=["red","color","green"]</code>//</p>
-
-<p>获取数组的长度：<code>var len = d.length</code></p>
-
-<p>数组最多可以包含4,294,967,295个项，多了，会报异常。</p>
-
-<p>toLocaleString()方法和toString()方法的不同。</p>
-
-<p>join()方法：<code>d.join(",")</code>// 返回 red，color，green
-数组的栈方法和队列方法
-push()方法将元素插入到数组末尾，pop()方法获取数组末尾的值
-shift()，获取数组的第一项</p>
-
-<p>重排方法：reverse()和sort方法</p>
-<p>reverse会反转数组[1,2,3,4,5]——&gt;[5,4,3,2,1]</p>
-<p>sort()方法会调用每一项的toString()方法后升序排列数组，如[1,2,5,10]的结果是[1,10,2,5]</p>
-<p>slice()方法</p>
-<p>concat()方法</p>
+<p><code>var p = new Person("Nick" ,29 , "software engineer");</code></p>
       </section>
     </div>
 
