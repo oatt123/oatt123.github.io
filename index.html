@@ -27,7 +27,23 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>js中的一些细节</p>
+        <h1>
+<a id="js中的一些细节" class="anchor" href="#js%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>js中的一些细节</h1>
+
+<p>1、XHTML:HTML遵循xml的规则。XHTML中“&lt;” ，“&gt;”需要使用html实体(&lt;&amp;lt;)替代，当然，这样会导致代码不容易理解，可以使用CDATA区域来解决（CDATA区域的语法规则：&lt;![CDATA[ ... ... ]]&gt;）</p>
+
+<p>2、使用引入的方式而不是直接将代码写在html中的有点有3个：1、便于维护，2、可缓存，3、避免xhtml以及其他xml技术的不兼容。</p>
+
+<p>3、文档模式（&lt;!DOCTYPE HTML PUBLIC "" ""&gt;）的概念：混杂模式，标准模式，会影响css的呈现和js的执行。</p>
+
+<p>4、noscript标签：标签中的内容，会在js功能缺失的情况下执行</p>
+
+<p>2级
+1、为初始化的变量初值是undefined
+2、可以在修改变量值的同时，修改变量的类型
+<code>var message = "hello"; 
+message = 100;
+</code></p>
       </section>
     </div>
 
